@@ -16,6 +16,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -39,6 +40,7 @@ DATABASES = {
     )
 }
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TIME_ZONE = "Asia/Kolkata"
 USE_TZ = True
@@ -62,4 +64,4 @@ INSTITUTE = {
     "cell_2": "9443173657",
     "cell_2_note": "GPay",
 }
-RECEIPT_START_NO = 1068   # your last paper receipt was 1067
+RECEIPT_START_NO =1   # your last paper receipt was 1067
